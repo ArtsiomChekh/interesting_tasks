@@ -1,19 +1,19 @@
 package tasks;
-
- /*
+/*
 Пользователь вводит целое трехзначное число. Вывести сумму его нечетных цифр.
 Если число не является трехзначным, вывести "ERROR".
 Если нечетных цифр нет, то вывести "NO".
- */
+*/
 
 import java.util.Scanner;
 
 class Task1 {
 
   public static void main(String[] args) {
-    Scanner in = new Scanner(System.in);
-    int number = in.nextInt();
+    Scanner scanner = new Scanner(System.in);
+    int number = scanner.nextInt();
     String stringOfNumb = Integer.toString(number);
+    scanner.close();
 
     if (!stringOfNumb.matches("^-?[0-9]{3}$")) {
       System.out.println("ERROR");
